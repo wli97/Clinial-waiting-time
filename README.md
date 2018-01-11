@@ -1,6 +1,6 @@
 # Machine Learning on Clinical waiting time
-**No code should be released on public mode due to privacy regulations**
-- Machine learning aims to develop complex computer algorithms that learn from
+**No code should be released on public mode due to privacy regulations.**
+Machine learning aims to develop complex computer algorithms that learn from
 data to solve particular tasks without being explicitly programmed (i.e. hardcoded).
 These soft-coded algorithms are designed to emulate
 human intelligence by adapting to changing environments through repetition
