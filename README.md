@@ -36,4 +36,23 @@ or complex datasets better than the average human observer.
 		- Technique used to reduce overfitting
 		- Partition data into training and validation/test set, repeat training with different partitions
 	1. Boosting
-		- **Ensemble method** (multiple learning algorithms used to obtain better performance than could be obtained from any of the constituent learning algorithms alone) to reduce 
+		- **Ensemble method** (multiple learning algorithms used to obtain better performance than could be obtained from any of the constituent learning algorithms alone) to reduce bias and variance.
+		- Converts a set of **weak learners** (classifier only slightly correlated with the true classification (better than random guessing)) into a **single strong learner** (arbitrarily well-correlated with the true classification)
+	1. AdaBoost (Adaptive Boosting)
+		- Ensemble method
+		- Outputs of weak learners are combined into a weighted sum as the final output of the boosted classifier
+		- Adopts by adjusting the weights of incorrectly classified instances so the subsequent classifiers focus more on difficult cases
+		- Sensitive to noisy data and outliers
+	1. Bagging (Bootstrap aggregating)
+		- For reducing variance
+		- Base regressors are fitted on random subsets of the original dataset and the individual predictions are aggregated to form a final prediction
+- Models (using sklearn):
+	1. Linear Regression:
+		- Fits a line to the dataset
+		- Simple and fast, but overly simplistic for most problems
+	1. Decision Tree:
+		- Divides input space by trying different split points and choosing the best split with the best (lowest) cost (MSE)
+		- Best tree depth found to be 2, makes use of only the previous average arrival time
+	1. Neural Network:
+		- Sigmoid function: 1/(1+e^(-z)) where z = (w_i)(a_i) + bias
+		- When weights are too large (positive or negative), z tends to be large as well, driving the output of the sigmoid to the far left (0) or far right (1). These are saturation regions where the gradient/derivative is too small, slowing down learning. Learning slows down when the gradient is small, because the weight upgrade of the network at each iteration is directly proportional to the gradient magnitude.
