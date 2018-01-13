@@ -50,10 +50,10 @@ or complex datasets better than the average human observer.
 - Models (using sklearn):
 	1. Linear Regression:
 		- Fits a line to the dataset
-		- Simple and fast, but overly simplistic for most problems
+		- Simple and fast, but overly simplistic for most problems in this case apart from weight and height prediction.
 	1. Decision Tree:
 		- Divides input space by trying different split points and choosing the best split with the best (lowest) cost (MSE)
-		- Best tree depth found to be 2, makes use of only the previous average arrival time
+		- Best tree depth found to be 2, makes use of only the previous average arrival time (overfitting happens with large height
 	1. Neural Network:
 		- Sigmoid function: 1/(1+e^(-z)) where z = (w_i)(a_i) + bias
 		- When weights are too large (positive or negative), z tends to be large as well, driving the output of the sigmoid to the far left (0) or far right (1). These are saturation regions where the gradient/derivative is too small, slowing down learning. Learning slows down when the gradient is small, because the weight upgrade of the network at each iteration is directly proportional to the gradient magnitude.
