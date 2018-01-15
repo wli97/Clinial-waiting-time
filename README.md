@@ -55,12 +55,16 @@ or complex datasets better than the average human observer.
 		- Divides input space by trying different split points and choosing the best split with the best (lowest) cost (MSE)
 		- Best tree depth found to be 2, makes use of only the previous average arrival time (overfitting happens with large height).
 		- Overfitting the training data leads to have poor performance on the testing set. We can specify the minimum number of training instances assigned to each leaf node. If a split results in a node of less than minimum count, then the split is rejected and the current node is taken as the final leaf node.
-	1. Support Vector Machine:
-		 
-	1. K-Means:
-		
 	1. Random Forest:
-		
+		- Collection of decision trees which decide on a classification/regression output in a vote fashion. By Strong Law of Large Numbers, it has the advantage of inheritent accuracy over single decision tree (less variance, noise). It also deals with the curse of high dimensionality. However, it is very difficult to interpret the intuition behind results.	
+	1. Support Vector Machine:
+		 - Classification: Constructs a hyper-plane in high dimensional space to achieve good separation that has the largest distance to the data points of any class.
+		 - Regression: Constructs a hyper-plane that best fits the data to within some margin epsilon where data within e are ignored when optimizing the mean errors.
+		 - Has the benefit of building hyperplanes in the smallest dimension possible using a kernel function (ie non-linear maps) to map data into a higher dimension.
+	1. K-Means (K-Clusters):
+		- Has the benefit of conducting unsupervised training
+		- Picks k random points for each cluster to create a centroid  (Buitinck et al., 2013).
+	
 	1. Neural Network:
 		- Sigmoid function: 1/(1+e^(-z)) where z = (w_i)(a_i) + bias
 		- When weights are too large (positive or negative), z tends to be large as well, driving the output of the sigmoid to the far left (0) or far right (1). These are saturation regions where the gradient/derivative is too small, slowing down learning. Learning slows down when the gradient is small, because the weight upgrade of the network at each iteration is directly proportional to the gradient magnitude.
